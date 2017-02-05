@@ -2,9 +2,7 @@ FROM ubuntu:14.04
 
 RUN mkdir -p /usr/share/java
 WORKDIR /usr/share/java
-RUN apt-get update
-RUN apt-get install -y curl
-RUN curl http://wufan.oss-cn-qingdao.aliyuncs.com/server/jdk-7u75-linux-x64.tar.gz
+RUN wget http://wufan.oss-cn-qingdao.aliyuncs.com/server/jdk-7u75-linux-x64.tar.gz
 RUN tar -zxvf jdk-7u75-linux-x64.tar.gz
 
 ENV JAVA_HOME /usr/share/java/jdk1.7.0_75
