@@ -4,6 +4,7 @@ RUN mkdir -p /usr/share/java
 WORKDIR /usr/share/java
 RUN apt-get update
 RUN apt-get install -y wget
+RUN apt-get install -y curl
 RUN wget http://wufan.oss-cn-qingdao.aliyuncs.com/server/jdk-7u75-linux-x64.tar.gz
 RUN tar -zxvf jdk-7u75-linux-x64.tar.gz
 
